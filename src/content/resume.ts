@@ -39,6 +39,8 @@ export interface Resume {
   tagline: string;
   location: { city: string; region: string; display: string };
   summary: string;
+  /** Under ~160 characters, for search results and link previews. */
+  shortSummary: string;
   valueStatement: string;
   metrics: Metric[];
   skillGroups: SkillGroup[];
@@ -52,7 +54,9 @@ export const resume = {
   tagline: 'React.js, TypeScript, Redux, MUI',
   location: { city: 'Austin', region: 'TX', display: 'Austin, TX' },
   summary:
-    'Senior frontend engineer with 8 years of experience modernizing legacy applications and building secure self-service web products, including production systems serving up to 17M users at an agency responsible for $160B+ in annual state revenue.',
+    'Frontend-focused software engineer with 8 years of experience modernizing legacy applications, building secure self-service web products, and delivering production systems serving up to 17M users within an agency responsible for more than $160B in annual state revenue. Strong background in React.js development, cross-functional collaboration, and translating complex business workflows into intuitive, reliable user experiences.',
+  shortSummary:
+    'Senior frontend engineer (React, TypeScript, Redux, MUI) with 8 years modernizing legacy apps, including public systems serving up to 17M users.',
   valueStatement:
     'I turn legacy, paper-and-phone government processes into fast, accessible React apps that millions of people use without needing help.',
   metrics: [
@@ -65,22 +69,29 @@ export const resume = {
     {
       id: 'frontend',
       label: 'Frontend',
-      skills: ['React', 'TypeScript', 'Redux', 'MUI', 'React Hook Form', 'Vite', 'HTML5', 'CSS3'],
+      skills: ['React', 'TypeScript', 'Redux', 'MUI', 'React Hook Form', 'Vite'],
     },
     {
       id: 'languages',
       label: 'Languages',
-      skills: ['TypeScript', 'JavaScript', 'Python', 'SQL'],
+      skills: ['JavaScript', 'TypeScript', 'Python', 'SQL', 'HTML5', 'CSS3'],
     },
     {
       id: 'backend',
       label: 'Backend & Data',
-      skills: ['REST APIs', 'Django', 'Oracle', 'MuleSoft', 'Natural'],
+      skills: [
+        'REST APIs',
+        'Django',
+        'Django ORM',
+        'Oracle Database',
+        'MuleSoft',
+        'Natural (mainframe)',
+      ],
     },
     {
       id: 'practices',
-      label: 'Practices',
-      skills: ['Accessibility', 'Unit testing', 'Code review', 'Agile', 'Git', 'npm', 'Jira'],
+      label: 'Tools & Practices',
+      skills: ['Git', 'npm', 'Jira', 'Agile', 'Code reviews', 'Unit testing'],
     },
   ],
   experience: [
@@ -93,13 +104,13 @@ export const resume = {
       end: null,
       headline: 'React modernization of public apps serving up to 17M users',
       bullets: [
-        'Modernized legacy Java applications with React, Redux, MUI, Vite and React Hook Form.',
-        'Built self-service interfaces that replaced paper and phone-based processes for taxpayers and businesses.',
-        'Shipped public-facing applications serving up to 17M users.',
-        'Improved application reliability from 95% to 100% uptime.',
-        'Worked across teams to define API contracts and turn policy into clear requirements.',
-        'Set front-end styling standards adopted across projects.',
-        'Led the team’s adoption of AI-assisted development tools.',
+        'Reconstructed and modernized legacy Java applications using React.js, Redux, Material UI (MUI), Vite, and React Hook Form.',
+        'Built secure self-service web interfaces that replaced paper- and phone-based processes, reducing manual handling and improving user completion speed.',
+        'Delivered production features for public-facing applications serving up to 17 million users within an agency responsible for more than $160 billion in annual state revenue.',
+        'Improved system reliability from 95% to 100% uptime, preventing outages during peak usage periods.',
+        'Collaborated with backend developers and business stakeholders to define requirements, clarify API contracts, and translate policy-driven rules into intuitive user experiences.',
+        'Established and enforced front-end styling best practices, ensuring a consistent, clean user experience across applications.',
+        'Integrated AI into daily engineering workflows, led discussions on high-value use cases, and guided team members in adopting AI tools effectively and responsibly.',
       ],
     },
     {
@@ -109,24 +120,25 @@ export const resume = {
       location: 'Austin, TX',
       start: '2018-07',
       end: '2022-06',
-      headline: 'Built the CARES Act aid application system under tight federal deadlines',
+      headline: 'Helped deliver the CARES Act aid application system under tight deadlines',
       bullets: [
-        'Built Django applications for medical student administration, athletics and financial aid.',
-        'Delivered the CARES Act aid application system under tight deadlines.',
-        'Mentored developers in a training-to-hire program.',
+        'Developed and maintained Django-based web applications supporting medical student administration and internal operational workflows for athletics and financial aid, building full-stack features across frontend, backend, and database layers.',
+        'Helped deliver the CARES Act application system under tight deadlines that supported distribution of millions of dollars in student aid.',
+        'Mentored new hires with limited coding experience through UT’s training-to-hire program, while contributing through code reviews and pair programming.',
       ],
     },
     {
       id: 'facebook',
       title: 'Ads Risk Analyst',
       employer: 'Facebook (via Core Techs)',
+      location: 'Austin, TX',
       start: '2015-09',
       end: '2017-09',
-      headline: 'Raised team review accuracy from 87% to 95%',
+      headline: 'Helped improve team accuracy from 87% to 95%',
       bullets: [
-        'Raised team accuracy from 87% to 95%.',
-        'Served as subject-matter expert on the malicious ads policy.',
-        'Built QA answer keys and review standards.',
+        'Served as a quality auditor and helped improve team accuracy from 87% to 95%.',
+        'Acted as a subject matter expert in malicious ads and content moderation policy.',
+        'Created answer keys for quality testing and helped establish improved review standards.',
       ],
     },
   ],

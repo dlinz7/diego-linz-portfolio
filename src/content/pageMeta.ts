@@ -8,10 +8,10 @@ export interface PageMeta {
 const defaultTitle = `${resume.name} · ${resume.title}`;
 
 export const pageMeta = {
-  home: { title: defaultTitle, description: resume.summary },
+  home: { title: defaultTitle, description: resume.shortSummary },
   personnelFile: {
     title: `Resume · ${resume.name}, ${resume.title}`,
-    description: `Full resume of ${resume.name}: ${resume.summary}`,
+    description: `Resume of ${resume.name}. ${resume.shortSummary}`,
   },
   shipsSystems: {
     title: `How this site is built · ${resume.name}`,
@@ -23,7 +23,7 @@ export const pageMeta = {
     description:
       'A working demo of complex forms built with React Hook Form, Yup, Redux Toolkit and MUI, themed as a fan-made Starfleet Academy application.',
   },
-  notFound: { title: `Page not found · ${resume.name}`, description: resume.summary },
+  notFound: { title: `Page not found · ${resume.name}`, description: resume.shortSummary },
 } as const satisfies Record<string, PageMeta>;
 
 /** Pages prerendered to static HTML at build time. */

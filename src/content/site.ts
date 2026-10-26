@@ -3,7 +3,7 @@ export const site = {
   url: import.meta.env.VITE_SITE_URL ?? 'https://diego-linz.vercel.app',
   availability: 'Open to senior frontend roles · Remote or Austin',
   resumePdfPath: '/Diego-Linz-Resume.pdf',
-  linkedInUrl: null as string | null,
+  linkedInUrl: 'https://www.linkedin.com/in/diego-linz-55520778/' as string | null,
   githubUrl: null as string | null,
   repoUrl: null as string | null,
   storybookPath: '/storybook/',

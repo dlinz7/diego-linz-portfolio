@@ -47,7 +47,8 @@ Built phase by phase, following §14 of the spec.
 
 ## Owner to-dos
 
-- Add `public/Diego-Linz-Resume.pdf` (the "Download resume" button links to it).
+- When the resume changes, replace `public/Diego-Linz-Resume.pdf` and update
+  `src/content/resume.ts` to match.
 - Fill in `linkedInUrl`, `githubUrl` and `repoUrl` in `src/content/site.ts`; their buttons stay
   hidden until set.
 - Set `VITE_SITE_URL` at build time once the domain is chosen (used for canonical and preview-card URLs).
