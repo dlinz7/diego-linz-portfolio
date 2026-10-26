@@ -4,8 +4,8 @@ export const site = {
   availability: 'Open to senior frontend roles · Remote or Austin',
   resumePdfPath: '/Diego-Linz-Resume.pdf',
   linkedInUrl: 'https://www.linkedin.com/in/diego-linz-55520778/' as string | null,
-  githubUrl: null as string | null,
-  repoUrl: null as string | null,
+  githubUrl: 'https://github.com/dlinz7' as string | null,
+  repoUrl: 'https://github.com/dlinz7/diego-linz-portfolio' as string | null,
   storybookPath: '/storybook/',
   showPhone: false,
   /** Split so the full address never appears in the HTML; see buildMailto. */
