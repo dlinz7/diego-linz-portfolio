@@ -1,0 +1,59 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { semanticTokens } from './semantic';
+import { typeScale, radius, breakpoints } from './tokens';
+
+<Meta title="Foundations/Design tokens" />
+
+# Design tokens
+
+Two layers: **primitive tokens** (`src/theme/tokens.ts`) hold raw values; **semantic tokens**
+(`src/theme/semantic.ts`) give them meaning per era. Components only read semantic tokens, so the
+same `division.command` reads gold in TOS and red in TNG.
+
+{['tng', 'tos'].map((era) => (
+
+  <section key={era}>
+    <h2>{era.toUpperCase()}</h2>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+      {Object.entries({
+        'surface.page': semanticTokens[era].surface.page,
+        'surface.panel': semanticTokens[era].surface.panel,
+        'text.primary': semanticTokens[era].text.primary,
+        'accent.primary': semanticTokens[era].accent.primary,
+        'accent.secondary': semanticTokens[era].accent.secondary,
+        'division.command': semanticTokens[era].division.command.main,
+        'division.operations': semanticTokens[era].division.operations.main,
+        'division.sciences': semanticTokens[era].division.sciences.main,
+        focus: semanticTokens[era].focus,
+      }).map(([name, value]) => (
+        <figure key={name} style={{ margin: 0, width: 140 }}>
+          <div style={{ height: 56, background: value, border: '1px solid #888', borderRadius: 6 }} />
+          <figcaption style={{ fontSize: 13 }}>
+            <strong>{name}</strong>
+            <br />
+            <code>{value}</code>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+))}
+
+## Type scale
+
+<table>
+  <tbody>
+    {Object.entries(typeScale).map(([name, value]) => (
+      <tr key={name}>
+        <th scope="row">{name}</th>
+        <td>
+          <code>{value}</code>
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+## Radii and breakpoints
+
+<pre>{JSON.stringify({ radius, breakpoints }, null, 2)}</pre>

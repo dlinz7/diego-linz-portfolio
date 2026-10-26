@@ -1,0 +1,6 @@
+dist
+dist-ssr
+coverage
+storybook-static
+package-lock.json
+public/mockServiceWorker.js

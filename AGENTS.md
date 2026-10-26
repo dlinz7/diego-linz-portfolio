@@ -1,0 +1,6 @@
+- The build spec is `docs/HANDOFF.md`. Read it before starting work, and build in the phase order in its §14.
+- Record any choice the spec leaves open as an ADR in `docs/adr/`.
+- Cut jargon in UI copy, code, comments and docs.
+- All resume text comes from `src/content/resume.ts`. Never duplicate it.
+- No official Star Trek logos, assets or quoted dialogue. Keep the footer disclaimer on every page.
+- Run `npm run lint`, `npm run typecheck` and `npm test` before committing.
